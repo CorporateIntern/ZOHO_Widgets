@@ -1,0 +1,23 @@
+a = [1,1,1,1,1,1,1,1,1,1];
+count = 0;
+check_var = true;
+for each ele in a
+{
+	for each ele in a
+	{
+		count = count +1;
+		//break statement
+		if(count ==51 )
+		{
+			check_var = false;
+		}
+		else{
+			//do nothing
+		}
+		
+		if(check_var == true){
+			info count;
+		}	
+	
+	}
+}
