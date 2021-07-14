@@ -1,0 +1,40 @@
+var1 = true;
+//info var1;
+list1 = {1,1,1,1,1,1,1,1,1,1};
+count1 = 0;
+sum1 = 0;
+for each  item2 in list1
+{
+	for each  item1 in list1
+	{
+		for each  item in list1
+		{
+			if(var1 = true)
+			{
+				count1 = count1 + 1;
+				//info "Successful Page retrieval for page :" + count1;
+				recordsList = zoho.crm.getRecords("Sales_Orders",count1,200);
+				for each  element in recordsList
+				{
+					sum1 = sum1 + element.get("Grand_Total");
+					/*if (element.get("SO_Number")==143890000008820559){
+						info "Found the required SO Number: ";
+						info element.get("Grand_Total");
+					}*/
+				}
+				//info sum1;
+				if(recordsList.size() == 0)
+				{
+					//info "The record is empty, hence stop.";
+					var1 = false;
+				}
+			}
+			else
+			{
+				//info "Just running the loop pointless";
+			}
+		}
+	}
+}
+info "the total Grand sum is : " + sum1;
+return sum1;
