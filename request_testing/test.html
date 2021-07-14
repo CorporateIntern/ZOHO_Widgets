@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>This is a paragraph.</p>
+    <p div="demo1">The change of text will appear here.</p>
+    <script>
+        console.log("Javascript is working.");
+        document.write("Javascript is working.");
+
+        var xhr = new XMLHttpRequest();
+        //access_token = "1000.35c2e7db078270e05b7d41e190743d64.3f40b4e4a8db3adef9bfbd319ea63493";
+       //url = "https://www.zohoapis.in/crm/v2.1/Sales_Orders?page="+1+"&per_page=200";
+       //url = "https://api.github.com/";
+       //url = "https://jsonplaceholder.typicode.com/posts";
+       url = "https://www.google.com/";
+       con
+
+        xhr.open('GET', url, true);
+        //xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        
+        //xhr.setRequestHeader("Host", "null");
+        //xhr.setRequestHeader("Authorization", "Zoho-oauthtoken " + access_token + "");
+        //xhr.withCredentials = true;
+        //httpRequest.withCredentials = false;
+        //xhr.open('GET', "https://api.github.com/", true);
+        
+        //xhr.setRequestHeader('X')
+        //xhr.setRequestHeader("Access-Control-Allow-Methods", "GET");
+        // xhr.setRequestHeader('Content-Type', 'application/json');
+        // xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); 
+        xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+        //Response.setHeader('Access-Control-Allow-Origin', '*');
+        
+        
+        console.log(xhr.status);
+        console.log("Before");
+        xhr.responseType = 'text';
+
+        xhr.onload = function () {
+            if (xhr.readyState === xhr.DONE) {
+                console.log(xhr.status);
+                if (xhr.status === 200) {
+                    console.log(xhr.status);
+                    //console.log(xhr.response);
+                    console.log(xhr.responseText);
+                    //document.getElementById("demo1").innerHTML = xhr.responseText;
+                    // document.write(xhr.responseText);
+                    // document.write("<br>");
+                    // //console.log(xhr.getAllResponseHeaders);
+                    // //console.log(xhr.getResponseHeader);
+                    
+                    // document.write(xhr.getResponseHeader);
+                    // document.write("<br>");
+                    // document.write(xhr.getAllResponseHeaders);
+
+
+                }
+            }
+        };
+
+        xhr.send(null);
+        //xhr.close();
+        console.log("Hello world");
+    </script>
+</body>
+
+</html>
