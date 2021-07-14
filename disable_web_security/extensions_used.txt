@@ -1,0 +1,3 @@
+Google Chrome Extension:
+1) Moesif Origin & CORS Changer
+2) Cross Domain - CORS
