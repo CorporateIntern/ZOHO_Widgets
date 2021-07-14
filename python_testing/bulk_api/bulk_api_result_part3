@@ -1,0 +1,41 @@
+def download_bulk_read_result():
+    import requests
+    import os
+
+    url = 'https://www.zohoapis.in/crm/bulk/v2/read/143890000017902151/result'
+
+    headers = {
+        'Authorization': 'Zoho-oauthtoken 1000.7047f44965121222661e780c5357101a.7c3831bf3cf473e4cc3156861d7d8f67',
+    }
+
+    response = requests.get(url=url, headers=headers)
+
+    if response is not None:
+        print("HTTP Status Code : " + str(response.status_code))
+
+        if 'Content-Type' in response.headers:
+            content_type = response.headers['Content-Type'].split(';')[0]
+
+            if content_type == 'application/json':
+                print(response.json())
+            else:
+                if 'Content-Disposition' in response.headers:
+                    file_name = ''
+                    content_disposition = response.headers['Content-Disposition']
+
+                    if "'" in content_disposition:
+                        start_index = content_disposition.rindex("'")
+                        file_name = content_disposition[start_index + 1:]
+
+                    elif '"' in content_disposition:
+                        start_index = content_disposition.rindex('=')
+                        file_name = content_disposition[start_index + 1:].replace('"', '')
+
+                    #destination_file = os.path.join('/Users/abc-123/Documents', file_name)
+                    destination_file = os.path.join('C:/Users/User/Desktop', file_name)
+
+                    with open(destination_file, 'wb') as f:
+                        for chunk in response:
+                            f.write(chunk)
+
+download_bulk_read_result()
