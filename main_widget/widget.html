@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link href="test.css" rel="stylesheet"> -->
+    <style>
+        h1 {
+            color: azure;
+        }
+
+        body {
+            background-color: darkorchid;
+            align-content: center;
+        }
+
+        .container {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            margin-top: -15%;
+            margin-left: -256px;
+            height: fit-content;
+            width: fit-content;
+            background-color: currentcolor;
+            text-align: center;
+            justify-content: center;
+            border: solid;
+            padding: 9%;
+            border-width: 20px;
+            border-color: ghostwhite;
+            border-radius: 50px;
+        }
+
+        .container1 {
+            height: auto;
+            background-color: deepskyblue;
+        }
+
+        .center {
+            padding: 15px 40px;
+            border: 7px solid;
+            text-align: center;
+            border-color: cornsilk;
+            background: scroll;
+        }
+
+        input#fname {
+            border-radius: 4px;
+        }
+
+        #header1 {
+            font-size: 20px;
+        }
+
+        #demo{
+            position: absolute;
+            height: 56px;
+            width: 200px;
+            color: blue;
+        
+            background: aquamarine;
+            
+            margin: 15px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!--button onclick="window.print()">Print this page</button-->
+    <!-- <h2>Creating an Object from a JSON String</h2> -->
+    <!--button type="button" onclick="document.write(5 + 6)">Try it</button-->
+    <div class="container">
+        <h1>The Grand Total</h1>
+
+        <label for="access_token" style="color: azure;">Access Token:</label>
+        <br>
+        <input type="text" id="fname"><br><br>
+        <button onclick="myFunction()">Submit</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="center">
+            <h4 id="header1" style="color:whitesmoke;">Counting...</h4>
+        </div>
+
+        <!-- <div id="demo" style="text-align: centre;"><p id="para1"style="text-align: center;"> Hello There</p></div> -->
+
+
+    </div>
+    <!--input type="file"-->
+    <!-- <script >
+      console.log("Console is working");
+    </script> -->
+
+    <script src="widget.js"></script>
+
+</body>
+
+</html>
