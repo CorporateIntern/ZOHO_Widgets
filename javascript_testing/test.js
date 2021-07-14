@@ -1,16 +1,13 @@
+//Install the xmlhttprequest in that file before running that code
+
 console.clear();
-//document.write("The process has started.");
 
 console.log("this console process is working.");
 
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-access_token = "1000.b5af589254e7f9bc75384218b7846b37.233144cd1aa34a4f481b16bdb099806f";
+access_token = "1000.7c085febbe4665668fe30ddf6e0a0588.c645e1c1ac45e64f3d21ae51cb3d26be";
 
-//function myFunction(){
-    //document.write("My function is working fine.");
-
-//access_token = document.getElementById("access_token");
 sum_ = 0;
 
 for(i=1;i<5;i++){
@@ -30,13 +27,11 @@ for(i=1;i<5;i++){
         l = obj.data.length;
 
         for(j=0; j<l;j++){
-            sum_ += obj.data[j].Grand_Total
-            //var x = document.getElementById("fname").value;
+            sum_ += obj.data[j].Grand_Total;
             console.log(obj.data[j].Grand_Total);
         }
         console.log(sum_);
-        //document.getElementById("para1").innerHTML = sum_;
-        //document.getElementById("para1").innerHTML = j;
+        
         
         if(l<200){
             string_text0 = "Successful retrieval for page : "+i+ " \n"+ "Total Records : " +l;
@@ -56,17 +51,6 @@ for(i=1;i<5;i++){
 
 string_text3 = "The total Grand_Total_Sum is:" + sum_;
 console.log(string_text3)
-//document.getElementById("header1").innerHTML = sum_;
-//}
-
-        
-//document.getElementById("demo").innerHTML = "yup! Inner HTML Works";
-//document.write("yup! Inner HTML Works");
-
-
-// url = "https://www.google.com/"
-// a = httpGet(url);
-// console.log(a)
 
 
 function httpGet(theUrl,access_token)
@@ -78,3 +62,4 @@ function httpGet(theUrl,access_token)
 
     return [xmlHttp.status,xmlHttp.responseText];
 }
+
