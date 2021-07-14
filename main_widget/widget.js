@@ -1,4 +1,4 @@
-console.clear();
+ console.clear();
 //document.write("The process has started.");
 
 console.log("this console process is working.");
