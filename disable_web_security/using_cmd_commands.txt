@@ -4,5 +4,5 @@ When u find the file location go into the directory using the following command:
 cd C:\Program Files\Google\Chrome\Application
 
 To disable the chrome web securities and CORS, run the following commands:
-chrome.exe --user-data-dir="C:\Users\User\Desktop\test" --disble-web-security --disable-gpu
+chrome.exe --user-data-dir="C:\Users\User\Desktop\test" --disable-web-security --disable-gpu
 
