@@ -1,16 +1,20 @@
- console.clear();
+ //console.log("console is working fine.");
+//document.write("Document is also working fine") ; 
+
+console.clear();
 //document.write("The process has started.");
 
 console.log("this console process is working.");
 
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+//;var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest
 
-access_token = "1000.b5af589254e7f9bc75384218b7846b37.233144cd1aa34a4f481b16bdb099806f";
+//access_token = "1000.b5af589254e7f9bc75384218b7846b37.233144cd1aa34a4f481b16bdb099806f";
 
-//function myFunction(){
-    //document.write("My function is working fine.");
+function myFunction(){
+   // document.write("My function is working fine.");
 
-//access_token = document.getElementById("access_token");
+access_token = document.getElementById("fname").value;
+
 sum_ = 0;
 
 for(i=1;i<5;i++){
@@ -57,7 +61,10 @@ for(i=1;i<5;i++){
 string_text3 = "The total Grand_Total_Sum is:" + sum_;
 console.log(string_text3)
 //document.getElementById("header1").innerHTML = sum_;
-//}
+
+document.getElementById("header1").innerHTML = sum_;
+}
+
 
         
 //document.getElementById("demo").innerHTML = "yup! Inner HTML Works";
@@ -78,4 +85,5 @@ function httpGet(theUrl,access_token)
 
     return [xmlHttp.status,xmlHttp.responseText];
 }
+
 
