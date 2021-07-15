@@ -6,7 +6,7 @@ console.clear();
 
 console.log("this console process is working.");
 
-//;var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest
+//var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest
 
 //access_token = "1000.b5af589254e7f9bc75384218b7846b37.233144cd1aa34a4f481b16bdb099806f";
 
